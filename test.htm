@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Default Page Title</title>
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+  <!-- <link rel="icon" href="favicon.ico"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <script type="text/javascript" src="tree_deserializer.js"></script>
+  <script type="text/javascript" src="biparse_tree.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<script>
+	test_tree = 
+	'<S	[NP		[N 	"I"/"in"]' +
+	'			[N	"skogen"/"the forest"]' +
+	'	]'+
+	'	[VP 	[VP	<VP	[v 	"finns"/"are"]' +
+	'				 	[p 	"det"/"there"]' +
+	'				>' +
+	'				[N "katter"/"cats"]' +
+	'			]' +
+	'	]' +
+	'>';
+	console.log(deserialize_tree(test_tree));
+	</script>
+
+</body>
+</html>
