@@ -26,6 +26,13 @@ node_t.prototype.children = function(children) {
 	}
 };
 
+node_t.prototype.add_child = function(new_child) {
+	if (!this.children_m) {
+		this.children_m = [];
+	}
+	this.children_m.push(new_child);
+};
+
 node_t.prototype.label = function(label) {
 	if (label) {
 		this.label_m = label;
