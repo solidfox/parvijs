@@ -18,8 +18,6 @@ function deserialize_tree(serialized_tree) {
 
 		var leading_bracket = match[1];
 		var ending_bracket = match[5];
-
-		if (current_node) {console.log(current_node.label());}
 		
 		if (ending_bracket) {
 			// There was an ending bracket!
@@ -37,7 +35,6 @@ function deserialize_tree(serialized_tree) {
 					current_node = current_node.parent();
 				}
 			} else {
-				console.log(current_node);
 				throw "Missmatching bracket: " + ending_bracket;
 			}
 		} else if (leading_bracket) {
